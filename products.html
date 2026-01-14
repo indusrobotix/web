@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - IndusRoboTix Robotics Kits</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Explore our range of robotics kits and components. Starter kits, advanced robotics, and custom solutions for all skill levels.">
+    <meta name="keywords" content="robotics kits, Arduino kits, ESP32 kits, line follower robot, educational robotics, Pakistan robotics">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css" id="dark-mode-style" disabled>
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Container (loaded dynamically) -->
+    <div class="navbar-container"></div>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1 class="page-title">Our Robotics Products</h1>
+            <p class="page-subtitle">High-quality, locally sourced components assembled into custom kits for all skill levels</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Products Filter -->
+        <section class="filter-section section-sm">
+            <div class="container">
+                <div class="filter-buttons" id="product-filters">
+                    <button class="filter-btn active" data-filter="all">All Products</button>
+                    <button class="filter-btn" data-filter="starter">Starter Kits</button>
+                    <button class="filter-btn" data-filter="advanced">Advanced Kits</button>
+                    <button class="filter-btn" data-filter="components">Components</button>
+                    <button class="filter-btn" data-filter="educational">Educational</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- All Products -->
+        <section class="products-section section">
+            <div class="container">
+                <div class="products-grid" id="products-container">
+                    <!-- Products loaded dynamically -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Component Pricing -->
+        <section class="pricing-section section">
+            <div class="container">
+                <h2 class="section-title">Component Pricing</h2>
+                <p class="section-subtitle">Individual components available for custom projects</p>
+                
+                <div class="pricing-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Component</th>
+                                <th>Description</th>
+                                <th>Price (PKR)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Arduino Uno R3</td>
+                                <td>Microcontroller Board</td>
+                                <td>2,500</td>
+                            </tr>
+                            <tr>
+                                <td>ESP32 Development Board</td>
+                                <td>WiFi & Bluetooth Enabled</td>
+                                <td>3,200</td>
+                            </tr>
+                            <tr>
+                                <td>DC Motor (300 RPM)</td>
+                                <td>With Encoder</td>
+                                <td>800</td>
+                            </tr>
+                            <tr>
+                                <td>Ultrasonic Sensor</td>
+                                <td>HC-SR04 Distance Sensor</td>
+                                <td>450</td>
+                            </tr>
+                            <tr>
+                                <td>Custom Acrylic Chassis</td>
+                                <td>Basic Design (20x15cm)</td>
+                                <td>1,500</td>
+                            </tr>
+                            <tr>
+                                <td>Motor Driver (L298N)</td>
+                                <td>Dual H-Bridge Driver</td>
+                                <td>650</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="text-center mt-5">
+                    <a href="contact.html" class="btn btn-primary btn-large">
+                        <i class="fas fa-quote-right"></i> Get Custom Quote
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 class="cta-title">Need a Custom Solution?</h2>
+                    <p class="cta-subtitle">We can create custom kits tailored to your specific project requirements.</p>
+                    <div class="hero-buttons">
+                        <a href="contact.html" class="btn btn-accent btn-large">
+                            <i class="fas fa-cogs"></i> Request Custom Kit
+                        </a>
+                        <a href="services.html" class="btn btn-secondary btn-large">
+                            <i class="fas fa-headset"></i> Consultation
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Container (loaded dynamically) -->
+    <div class="footer-container"></div>
+
+    <!-- Chatbot Container (loaded dynamically) -->
+    <div class="chatbot-container"></div>
+
+    <!-- JavaScript Files -->
+    <script src="config.js"></script>
+    <script src="assets/js/main.js"></script>
+    
+    <!-- Page-specific JavaScript -->
+    <script>
+        // Products page specific functionality
+        window.pageInit = function() {
+            loadProducts();
+            setupProductFilters();
+            setupPriceTable();
+        };
+        
+        function loadProducts() {
+            const container = document.getElementById('products-container');
+            if (!container || !window.SITE_CONFIG) return;
+            
+            // Extended products list
+            const allProducts = [
+                ...SITE_CONFIG.products,
+                {
+                    id: "educational-kit",
+                    name: "Educational Robotics Kit",
+                    price: "Rs. 12,000",
+                    description: "Complete classroom solution with curriculum materials, teacher guides, and group activities.",
+                    features: ["Arduino Based", "Curriculum Included", "Group Activities", "Teacher Resources"],
+                    badge: "School Package",
+                    category: "educational"
+                },
+                {
+                    id: "sensor-kit",
+                    name: "Sensor Starter Kit",
+                    price: "Rs. 3,200",
+                    description: "Collection of essential sensors for robotics projects. Compatible with Arduino and Raspberry Pi.",
+                    features: ["8 Different Sensors", "Jumper Wires", "Breadboard", "Tutorials"],
+                    badge: "Components",
+                    category: "components"
+                },
+                {
+                    id: "motor-bundle",
+                    name: "Motor & Driver Bundle",
+                    price: "Rs. 4,500",
+                    description: "Complete motor setup with drivers and controllers for robotics projects.",
+                    features: ["4 DC Motors", "L298N Driver", "Power Supply", "Wiring Harness"],
+                    badge: "Components",
+                    category: "components"
+                },
+                {
+                    id: "ai-robot",
+                    name: "AI Robotics Kit",
+                    price: "Rs. 25,000",
+                    description: "Advanced kit with computer vision capabilities and machine learning features.",
+                    features: ["Raspberry Pi", "Camera Module", "ML Capabilities", "Advanced Sensors"],
+                    badge: "Premium",
+                    category: "advanced"
+                }
+            ];
+            
+            // Display all products
+            container.innerHTML = allProducts.map(product => `
+                <div class="product-card animate-on-scroll" data-category="${product.category || 'starter'}">
+                    <div class="product-badge">${product.badge}</div>
+                    <div class="product-image">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="product-info">
+                        <h3>${product.name}</h3>
+                        <p>${product.description}</p>
+                        <div class="product-specs">
+                            ${product.features.map(feature => `
+                                <div class="spec-item">
+                                    <i class="fas fa-check"></i> ${feature}
+                                </div>
+                            `).join('')}
+                        </div>
+                        <div class="product-footer">
+                            <div class="product-price">${product.price}</div>
+                            <a href="contact.html?product=${product.id}" class="btn btn-primary btn-small">
+                                <i class="fas fa-shopping-cart"></i> Inquire Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+        
+        function setupProductFilters() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const productCards = document.querySelectorAll('.product-card');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    const filter = this.getAttribute('data-filter');
+                    
+                    // Show/hide products based on filter
+                    productCards.forEach(card => {
+                        if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                            card.style.display = 'block';
+                            setTimeout(() => {
+                                card.style.opacity = '1';
+                                card.style.transform = 'translateY(0)';
+                            }, 10);
+                        } else {
+                            card.style.opacity = '0';
+                            card.style.transform = 'translateY(20px)';
+                            setTimeout(() => {
+                                card.style.display = 'none';
+                            }, 300);
+                        }
+                    });
+                });
+            });
+        }
+        
+        function setupPriceTable() {
+            const tableRows = document.querySelectorAll('.pricing-table tbody tr');
+            tableRows.forEach((row, index) => {
+                row.style.animationDelay = `${index * 0.1}s`;
+                row.classList.add('animate-on-scroll');
+            });
+        }
+        
+        // Handle URL parameters for product filtering
+        window.addEventListener('load', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const searchQuery = urlParams.get('search');
+            const category = urlParams.get('category');
+            
+            if (searchQuery) {
+                document.getElementById('global-search').value = searchQuery;
+                filterProductsBySearch(searchQuery);
+            }
+            
+            if (category) {
+                const filterBtn = document.querySelector(`.filter-btn[data-filter="${category}"]`);
+                if (filterBtn) {
+                    filterBtn.click();
+                }
+            }
+        });
+        
+        function filterProductsBySearch(query) {
+            const productCards = document.querySelectorAll('.product-card');
+            const searchTerm = query.toLowerCase();
+            
+            productCards.forEach(card => {
+                const title = card.querySelector('h3').textContent.toLowerCase();
+                const description = card.querySelector('p').textContent.toLowerCase();
+                const features = card.querySelectorAll('.spec-item');
+                let hasFeatureMatch = false;
+                
+                features.forEach(feature => {
+                    if (feature.textContent.toLowerCase().includes(searchTerm)) {
+                        hasFeatureMatch = true;
+                    }
+                });
+                
+                if (title.includes(searchTerm) || description.includes(searchTerm) || hasFeatureMatch) {
+                    card.style.display = 'block';
+                    setTimeout(() => {
+                        card.style.opacity = '1';
+                        card.style.transform = 'translateY(0)';
+                    }, 10);
+                } else {
+                    card.style.opacity = '0';
+                    card.style.transform = 'translateY(20px)';
+                    setTimeout(() => {
+                        card.style.display = 'none';
+                    }, 300);
+                }
+            });
+        }
+    </script>
+</body>
+</html>
