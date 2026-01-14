@@ -1,18 +1,24 @@
+<!-- IndusRoboTix - Live Chat Widget -->
 <div class="live-chat-widget" id="live-chat-widget">
-    <button class="chat-toggle" id="chat-toggle">
+    <!-- Chat Toggle Button -->
+    <button class="chat-toggle" id="chat-toggle" aria-label="Open chat">
         <i class="fas fa-comments"></i>
-        <span class="chat-badge">1</span>
+        <span class="chat-badge" id="chat-notification">1</span>
     </button>
-    
+
+    <!-- Chat Window -->
     <div class="chat-window" id="chat-window">
+        <!-- Chat Header -->
         <div class="chat-header">
             <h3><i class="fas fa-robot"></i> IndusRoboTix Support</h3>
-            <button class="chat-close" id="chat-close">
+            <button class="chat-close" id="chat-close" aria-label="Close chat">
                 <i class="fas fa-times"></i>
             </button>
         </div>
-        
+
+        <!-- Chat Messages -->
         <div class="chat-body" id="chat-body">
+            <!-- Messages will be dynamically added here -->
             <div class="chat-message bot">
                 <div class="message-content">
                     <p>Hello! I'm Robo, your IndusRoboTix assistant. How can I help you today?</p>
@@ -20,14 +26,16 @@
                 </div>
             </div>
         </div>
-        
+
+        <!-- Chat Input -->
         <div class="chat-input">
-            <input type="text" placeholder="Type your message..." id="chat-input">
-            <button id="chat-send">
+            <input type="text" placeholder="Type your message..." id="chat-input" aria-label="Type your message">
+            <button id="chat-send" aria-label="Send message">
                 <i class="fas fa-paper-plane"></i>
             </button>
         </div>
-        
+
+        <!-- Quick Options -->
         <div class="chat-options">
             <p>Quick options:</p>
             <div class="option-buttons">
