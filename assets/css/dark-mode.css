@@ -1,0 +1,196 @@
+/* ============================================
+   IndusRoboTix - Dark Mode Styles
+   ============================================ */
+
+body.dark-mode {
+    color: #e2e8f0;
+    background-color: #0f172a;
+}
+
+/* Navigation */
+body.dark-mode .navbar {
+    background-color: rgba(15, 23, 42, 0.95);
+    border-bottom-color: #334155;
+}
+
+body.dark-mode .logo {
+    color: #e2e8f0;
+}
+
+body.dark-mode .nav-menu a {
+    color: #94a3b8;
+}
+
+body.dark-mode .nav-menu a:hover,
+body.dark-mode .nav-menu a.active {
+    color: #60a5fa;
+}
+
+body.dark-mode .menu-toggle {
+    color: #e2e8f0;
+}
+
+body.dark-mode .dark-mode-toggle {
+    color: #e2e8f0;
+}
+
+body.dark-mode .dark-mode-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Page Header */
+body.dark-mode .page-header {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+}
+
+body.dark-mode .page-subtitle {
+    color: #94a3b8;
+}
+
+/* Cards & Components */
+body.dark-mode .card {
+    background: #1e293b;
+    border-color: #334155;
+}
+
+body.dark-mode .product-card {
+    background: #1e293b;
+}
+
+body.dark-mode .product-info p {
+    color: #cbd5e1;
+}
+
+body.dark-mode .product-image {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+}
+
+body.dark-mode .product-image i {
+    color: #60a5fa;
+}
+
+body.dark-mode .product-footer {
+    border-color: #334155;
+}
+
+body.dark-mode .spec-item {
+    color: #94a3b8;
+}
+
+body.dark-mode .service-card {
+    background: #1e293b;
+}
+
+body.dark-mode .service-card:hover {
+    border-color: #3b82f6;
+}
+
+body.dark-mode .service-icon {
+    background: #334155;
+    color: #60a5fa;
+}
+
+body.dark-mode .service-card p {
+    color: #cbd5e1;
+}
+
+body.dark-mode .testimonial-card {
+    background: #1e293b;
+    border-color: #334155;
+}
+
+body.dark-mode .testimonial-content {
+    color: #cbd5e1;
+}
+
+body.dark-mode .author-info p {
+    color: #94a3b8;
+}
+
+/* Forms */
+body.dark-mode .form-control {
+    background-color: #334155;
+    border-color: #475569;
+    color: white;
+}
+
+body.dark-mode .form-control:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+body.dark-mode .form-control::placeholder {
+    color: #94a3b8;
+}
+
+body.dark-mode .form-label {
+    color: #e2e8f0;
+}
+
+/* Footer */
+body.dark-mode .footer {
+    background: #0f172a;
+}
+
+body.dark-mode .footer-col p {
+    color: #94a3b8;
+}
+
+body.dark-mode .footer-col ul li a {
+    color: #94a3b8;
+}
+
+body.dark-mode .footer-col ul li a:hover {
+    color: white;
+}
+
+body.dark-mode .social-icon {
+    background-color: #334155;
+}
+
+body.dark-mode .newsletter-form input {
+    background-color: #334155;
+    border-color: #475569;
+}
+
+body.dark-mode .footer-bottom {
+    border-color: #334155;
+}
+
+body.dark-mode .footer-bottom p {
+    color: #94a3b8;
+}
+
+body.dark-mode .footer-links a {
+    color: #94a3b8;
+}
+
+/* Buttons */
+body.dark-mode .btn-outline {
+    color: #60a5fa;
+    border-color: #60a5fa;
+}
+
+body.dark-mode .btn-outline:hover {
+    background-color: #60a5fa;
+    color: white;
+}
+
+body.dark-mode .btn-ghost:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Utility Classes */
+body.dark-mode .bg-light {
+    background-color: #1e293b !important;
+}
+
+body.dark-mode .bg-white {
+    background-color: #1e293b !important;
+}
+
+body.dark-mode .text-muted {
+    color: #94a3b8 !important;
+}
+
+/* Page-specific dark mode styles will be added in page-specific CSS */
