@@ -5,15 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IndusRoboTix - Pakistan's Premier Robotics Provider</title>
     
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="IndusRoboTix: Pakistan's premier robotics provider offering custom kits, workshops, and technical support.">
-    <meta name="keywords" content="robotics Pakistan, robotic kits Pakistan, Arduino Pakistan, STEM education Pakistan">
+    <!-- SEO Meta Tags (loaded from config) -->
     
     <!-- Stylesheets -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/dark-mode.css" id="dark-mode-style" disabled>
     <link rel="stylesheet" href="assets/css/animations.css">
-    <link rel="stylesheet" href="assets/css/components.css">
     
     <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,13 +25,186 @@
     <!-- Hero Section -->
     <header class="page-header hero-header">
         <div class="container">
-            <!-- ... hero content ... -->
+            <div class="hero-badge">
+                <span><i class="fas fa-trophy"></i> PAKISTAN'S PREMIER ROBOTICS PROVIDER</span>
+            </div>
+            <h1 class="page-title">Building The Future of Robotics In Pakistan</h1>
+            <p class="page-subtitle">Precision Engineering for Tomorrow's Innovators. From education to innovation, we power Pakistan's robotic dreams.</p>
+            <div class="hero-buttons">
+                <a href="products.html" class="btn btn-primary btn-large">
+                    <i class="fas fa-robot"></i> Explore Products
+                </a>
+                <a href="contact.html" class="btn btn-secondary btn-large">
+                    <i class="fas fa-quote-right"></i> Get Custom Quote
+                </a>
+            </div>
+            <div class="hero-image-container">
+                <div class="floating-elements">
+                    <div class="floating-gear gear-1">
+                        <i class="fas fa-cog"></i>
+                    </div>
+                    <div class="floating-gear gear-2">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <div class="floating-gear gear-3">
+                        <i class="fas fa-sitemap"></i>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
 
     <!-- Main Content -->
     <main>
-        <!-- ... page-specific content ... -->
+        <!-- Search Bar -->
+        <section class="search-section section-sm">
+            <div class="container">
+                <div class="search-container">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search robotics kits, components, or services..." id="global-search">
+                    <button class="btn btn-small btn-primary">
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats-section section">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-shipping-fast"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-number" data-count="500">0</div>
+                            <div class="stat-label">Kits Delivered</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-ruler-combined"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-number" data-count="50">0</div>
+                            <div class="stat-label">Custom Designs</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-flag-pakistan"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">Local Sourcing</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-smile"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-number">98%</div>
+                            <div class="stat-label">Customer Satisfaction</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us -->
+        <section class="why-section section">
+            <div class="container">
+                <h2 class="section-title">Why Choose IndusRoboTix</h2>
+                <p class="section-subtitle">Engineered for Excellence. We combine local expertise with precision engineering to deliver robotics solutions that empower Pakistan's innovators.</p>
+                
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h3>Custom Robotic Kits</h3>
+                        <p>Pre-assembled and DIY robotic kits tailored for students, hobbyists, and professionals.</p>
+                        <a href="products.html" class="btn btn-small btn-secondary">Explore Kits</a>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-ruler-combined"></i>
+                        </div>
+                        <h3>Precision Chassis</h3>
+                        <p>Custom-designed acrylic chassis with laser-cut precision for your unique projects.</p>
+                        <a href="services.html" class="btn btn-small btn-secondary">Design Yours</a>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3>Expert Assembly</h3>
+                        <p>Professional component assembly and testing to ensure your robots work flawlessly.</p>
+                        <a href="services.html" class="btn btn-small btn-secondary">Learn More</a>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>STEM Education</h3>
+                        <p>Supporting Pakistan's education sector with quality robotics learning materials.</p>
+                        <a href="services.html" class="btn btn-small btn-secondary">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Products -->
+        <section class="featured-section section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Featured Robotic Kits</h2>
+                    <p class="section-subtitle">Explore our range of quality robotic kits designed for learning and innovation.</p>
+                    <a href="products.html" class="btn btn-outline">
+                        View All Products <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="products-grid" id="featured-products">
+                    <!-- Products will be loaded dynamically from config -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials-section section">
+            <div class="container">
+                <h2 class="section-title">What Our Customers Say</h2>
+                <p class="section-subtitle">Trusted by students, educators, and makers across Pakistan.</p>
+                
+                <div class="testimonials-grid" id="testimonials-container">
+                    <!-- Testimonials will be loaded dynamically from config -->
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 class="cta-title">Ready to Build Your Next Robot?</h2>
+                    <p class="cta-subtitle">Whether you need a complete kit or custom components, we're here to help bring your robotic vision to life.</p>
+                    <div class="hero-buttons">
+                        <a href="contact.html" class="btn btn-accent btn-large">
+                            <i class="fas fa-rocket"></i> Start Your Project
+                        </a>
+                        <a href="services.html" class="btn btn-secondary btn-large">
+                            <i class="fas fa-cogs"></i> Explore Services
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- Footer Container (loaded dynamically) -->
@@ -46,8 +216,6 @@
     <!-- JavaScript Files -->
     <script src="config.js"></script>
     <script src="assets/js/main.js"></script>
-    <script src="assets/js/dark-mode.js"></script>
-    <script src="assets/js/chatbot.js"></script>
     
     <!-- Page-specific JavaScript -->
     <script>
@@ -69,7 +237,95 @@
                     stat.textContent = Math.floor(current) + '+';
                 }, 20);
             });
+            
+            // Load featured products
+            loadFeaturedProducts();
+            
+            // Load testimonials
+            loadTestimonials();
+            
+            // Search functionality
+            setupSearch();
         };
+        
+        function loadFeaturedProducts() {
+            const container = document.getElementById('featured-products');
+            if (!container || !window.SITE_CONFIG) return;
+            
+            // Show first 3 products
+            const products = SITE_CONFIG.products.slice(0, 3);
+            container.innerHTML = products.map(product => `
+                <div class="product-card animate-on-scroll">
+                    <div class="product-badge">${product.badge}</div>
+                    <div class="product-image">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="product-info">
+                        <h3>${product.name}</h3>
+                        <p>${product.description}</p>
+                        <div class="product-specs">
+                            ${product.features.map(feature => `
+                                <div class="spec-item">
+                                    <i class="fas fa-check"></i> ${feature}
+                                </div>
+                            `).join('')}
+                        </div>
+                        <div class="product-footer">
+                            <div class="product-price">${product.price}</div>
+                            <a href="products.html#${product.id}" class="btn btn-primary btn-small">
+                                <i class="fas fa-eye"></i> View Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+        
+        function loadTestimonials() {
+            const container = document.getElementById('testimonials-container');
+            if (!container || !window.SITE_CONFIG) return;
+            
+            container.innerHTML = SITE_CONFIG.testimonials.map(testimonial => `
+                <div class="testimonial-card animate-on-scroll">
+                    <div class="testimonial-content">
+                        ${testimonial.content}
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">${testimonial.initials}</div>
+                        <div class="author-info">
+                            <h4>${testimonial.name}</h4>
+                            <p>${testimonial.role}</p>
+                            <div class="author-rating">
+                                ${Array.from({length: 5}, (_, i) => `
+                                    <i class="fas fa-star${i < Math.floor(testimonial.rating) ? '' : testimonial.rating % 1 >= 0.5 && i === Math.floor(testimonial.rating) ? '-half-alt' : ''}"></i>
+                                `).join('')}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+        
+        function setupSearch() {
+            const searchInput = document.getElementById('global-search');
+            const searchButton = document.querySelector('.search-container .btn');
+            
+            if (searchInput && searchButton) {
+                const performSearch = () => {
+                    const query = searchInput.value.trim();
+                    if (query) {
+                        window.location.href = `products.html?search=${encodeURIComponent(query)}`;
+                    }
+                };
+                
+                searchButton.addEventListener('click', performSearch);
+                searchInput.addEventListener('keypress', (e) => {
+                    if (e.key === 'Enter') {
+                        performSearch();
+                    }
+                });
+            }
+        }
     </script>
 </body>
 </html>
