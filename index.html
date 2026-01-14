@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IndusRoboTix - Pakistan's Premier Robotics Provider</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="IndusRoboTix: Pakistan's premier robotics provider offering custom kits, workshops, and technical support.">
+    <meta name="keywords" content="robotics Pakistan, robotic kits Pakistan, Arduino Pakistan, STEM education Pakistan">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css" id="dark-mode-style" disabled>
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Container (loaded dynamically) -->
+    <div class="navbar-container"></div>
+
+    <!-- Hero Section -->
+    <header class="page-header hero-header">
+        <div class="container">
+            <!-- ... hero content ... -->
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- ... page-specific content ... -->
+    </main>
+
+    <!-- Footer Container (loaded dynamically) -->
+    <div class="footer-container"></div>
+
+    <!-- Chatbot Container (loaded dynamically) -->
+    <div class="chatbot-container"></div>
+
+    <!-- JavaScript Files -->
+    <script src="config.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/dark-mode.js"></script>
+    <script src="assets/js/chatbot.js"></script>
+    
+    <!-- Page-specific JavaScript -->
+    <script>
+        // Home page specific functionality
+        window.pageInit = function() {
+            // Animated number counting
+            const statNumbers = document.querySelectorAll('.stat-number[data-count]');
+            statNumbers.forEach(stat => {
+                const target = parseInt(stat.getAttribute('data-count'));
+                const increment = target / 100;
+                let current = 0;
+                
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        current = target;
+                        clearInterval(timer);
+                    }
+                    stat.textContent = Math.floor(current) + '+';
+                }, 20);
+            });
+        };
+    </script>
+</body>
+</html>
